@@ -50,7 +50,7 @@ const config = createConfig([
   }),
   defineConstants({
     'process.env.NODE_ENV': process.env.NODE_ENV,
-    'process.env.PUBLIC_PATH': 'https://alexanderkrum.github.io/ext-app/',
+    'process.env.PUBLIC_PATH': publicPath.replace(/\/$/, ''),
   }),
   addPlugins([
     new webpack.ProgressPlugin(),
